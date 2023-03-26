@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="./assets/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
 </head>
 
 <body>
@@ -20,17 +21,12 @@
           <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
             <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                <div class="flex items-center justify-between w-full md:w-auto">
-                  <a href="#">
-                    <span class="sr-only">Title</span>
-                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
-                  </a>
-                </div>
+                
               </div>
               <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Horarios</a>
+                <a href="#Horarios" class="font-medium text-gray-500 hover:text-gray-900">Horarios</a>
                 <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Quienes Somos</a>
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Contactanos</a>
+                <a href="#contactBlock" class="font-medium text-gray-500 hover:text-gray-900">Contactanos</a>
                 <a href="#" class="font-medium text-gray-500 hover:text-gray-900">FR Tips</a>
               </div>
             </nav>
@@ -67,32 +63,63 @@
       </div>
     </div>
   </div>
-<!--
-  <div class="bg-white">
+
+  <div id="Horarios" class="bg-white">
     <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Proximas carreras</h2>
-      <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-         content 
-         <div class="group relative">
-          <div
-            class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
-            <img src="" alt="" class="w-full">
+      <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Horarios</h2>
+      <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8" >
+        
+        <a href="https://goo.gl/maps/rUd53KFJvCorgBRn7" target="_blank">
+          <div class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none text-center">
+            <img src="./assets/Crossmountain.jpg" alt="" class="w-full">
+            <p>Montaña de la cruz, Ituzaingo</p>
+            Martes y Jueves 18:30hs
+            Sabado 8hs
           </div>
-          <div class="mt-4 flex justify-between">
-            <h3 class="text-sm text-gray-700">
-              <span aria-hidden="true" class="absolute inset-0"></span>
-              title
-            </h3>
+        </a>
+
+        <a href="https://goo.gl/maps/rUd53KFJvCorgBRn7" target="_blank">
+          <div class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none text-center">
+            <img src="./assets/Plaza Mitre.jpeg" alt="" class="w-full">
+            <p>Plaza Mitre, Castelar</p>
+            Martes y Jueves 8:00hs.
+            Sabado 8hs
           </div>
+        </a>
+
+        <a href="https://goo.gl/maps/rUd53KFJvCorgBRn7" target="_blank">
+          <div class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none text-center">
+            <img src="./assets/Puente rosales.jpg" alt="" class="w-full">
+            <p>Puente Rosales y Colectora</p>
+            Lunes y Miercoles 18:30hs.
+            
+          </div>
+        </a>
+
+        
+        
+         
         </div>
+       
+        <div class="mt-20 justify-left " >
+          <div id="map"></div>
+          <button onclick="moveMarker(40.712776, -74.005974)">Nueva York</button>
+          <button onclick="moveMarker(51.507351, -0.127758)">Londres</button>
+          <button onclick="moveMarker(-33.868820, 151.209296)">Sydney</button>
+ <!--
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.875567321422!2d-58.67931458436484!3d-34.63258466653377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf10871ce515%3A0xf462a708c13dba93!2sMonta%C3%B1a%20De%20La%20Cruz!5e0!3m2!1ses!2sar!4v1679847365541!5m2!1ses!2sar" 
+                width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+-->
+       </div>
       </div>
     </div>
   </div>
--->
+  
+  
   <div class="bg-gray-50">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
       <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        <span class="block">Contact</span>
+        <span class="block" id="contactBlock">Contactanos</span>
         <span class="block text-indigo-600">keep in touch.</span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
@@ -125,6 +152,11 @@
       </div>
     </div>
   </div>
+  <script>
+    window.onload = function () {
+      initMap();
+    };
+  </script>
 </body>
 
 </html>
