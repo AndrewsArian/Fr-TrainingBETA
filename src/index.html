@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="./assets/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
   <div id="Horarios" class="bg-white">
     <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
       <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Horarios</h2>
-      <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+      <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8" >
         
         <a href="https://goo.gl/maps/rUd53KFJvCorgBRn7" target="_blank">
           <div class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none text-center">
@@ -99,12 +100,17 @@
         
          
         </div>
-        <div class="mt-20 justify-left ">
-    
-
+       
+        <div class="mt-20 justify-left " >
+          <div id="map"></div>
+          <button onclick="moveMarker(40.712776, -74.005974)">Nueva York</button>
+          <button onclick="moveMarker(51.507351, -0.127758)">Londres</button>
+          <button onclick="moveMarker(-33.868820, 151.209296)">Sydney</button>
+ <!--
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.875567321422!2d-58.67931458436484!3d-34.63258466653377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf10871ce515%3A0xf462a708c13dba93!2sMonta%C3%B1a%20De%20La%20Cruz!5e0!3m2!1ses!2sar!4v1679847365541!5m2!1ses!2sar" 
                 width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+-->
+       </div>
       </div>
     </div>
   </div>
@@ -146,6 +152,11 @@
       </div>
     </div>
   </div>
+  <script>
+    window.onload = function () {
+      initMap();
+    };
+  </script>
 </body>
 
 </html>

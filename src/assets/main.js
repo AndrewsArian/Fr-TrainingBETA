@@ -43,7 +43,33 @@ async function fetchData(urlAPI){
     }
 })();
 
+//mapa de chatgpt3
 
+var map;
+var marker;
+
+function initMap() {
+  // Crear mapa centrado en Nueva York
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 40.712776, lng: -74.005974 },
+    zoom: 8,
+  });
+
+  // Crear marcador
+  marker = new google.maps.Marker({
+    position: { lat: 40.712776, lng: -74.005974 },
+    map: map,
+  });
+}
+
+function moveMarker(lat, lng) {
+  // Mover el marcador a una nueva ubicación
+  var newPosition = new google.maps.LatLng(lat, lng);
+  marker.setPosition(newPosition);
+
+  // Centrar el mapa en la nueva ubicación del marcador
+  map.setCenter(newPosition);
+}
 
 /*export function runCode(url) {
    try {
