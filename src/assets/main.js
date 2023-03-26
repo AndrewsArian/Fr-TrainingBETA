@@ -42,3 +42,29 @@ async function fetchData(urlAPI){
         console.log(error);
     }
 })();
+
+
+
+/*export function runCode(url) {
+   try {
+    new URL(url);
+    } catch (error) {
+      throw new Error('Invalid URL');
+    }
+    try{
+        const response = await fetch(url);
+        return response.json();
+    } catch (error){
+        throw new Error('Something was wrong')
+    }
+    async function fetchData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data
+  }
+}
+  async () => {
+   
+    }     // Tu código aquí 👈
+}
+*/
